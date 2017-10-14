@@ -196,7 +196,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 dataTransfer[1] = url;
 
                 getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(MapsActivity.this, "Showing Nearby Schools", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MapsActivity.this, "Showing Nearby Banks", Toast.LENGTH_SHORT).show();
                 break;
             }
             case R.id.btnRestaurants: {
