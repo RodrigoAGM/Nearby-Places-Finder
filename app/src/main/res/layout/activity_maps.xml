@@ -12,19 +12,20 @@
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="359dp"
-        android:layout_height="426dp"
+        android:layout_height="0dp"
         map:layout_constraintBottom_toBottomOf="parent"
         map:layout_constraintEnd_toEndOf="parent"
         map:layout_constraintHorizontal_bias="0.5"
         map:layout_constraintStart_toStartOf="parent"
-        map:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        map:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         tools:context="com.example.rodrigo.nearbyplaces.MapsActivity" />
 
     <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
         android:layout_width="350dp"
         android:layout_height="42dp"
-        android:layout_marginRight="4dp"
         android:layout_marginStart="8dp"
+        android:layout_marginRight="4dp"
         map:layout_constraintRight_toRightOf="parent"
         map:layout_constraintStart_toStartOf="parent"
         map:layout_constraintTop_toBottomOf="@+id/linearLayout2">
@@ -44,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="onClick"
-                android:text="Restaurants" />
+                android:text="@string/restaurants" />
 
             <Button
                 android:id="@+id/btnHospitals"
@@ -52,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="onClick"
-                android:text="Hospitals" />
+                android:text="@string/hospitals" />
 
             <Button
                 android:id="@+id/btnBanks"
@@ -60,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="onClick"
-                android:text="Banks" />
+                android:text="@string/banks" />
 
             <Button
                 android:id="@+id/btnSchools"
@@ -68,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="onClick"
-                android:text="Schools" />
+                android:text="@string/schools" />
 
             <Button
                 android:id="@+id/btnHotels"
@@ -76,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="onClick"
-                android:text="Hotels" />
+                android:text="@string/hotels" />
 
         </LinearLayout>
     </HorizontalScrollView>
@@ -84,13 +85,15 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="345dp"
-        android:layout_height="43dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="53dp"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="43dp"
         android:orientation="horizontal"
+        map:layout_constraintBottom_toTopOf="@+id/map"
         map:layout_constraintEnd_toEndOf="parent"
         map:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-1dp">
+        map:layout_constraintTop_toTopOf="parent">
 
         <EditText
             android:id="@+id/txtPlace"
@@ -108,7 +111,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:text="Search" />
+            android:text="@string/search" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
